@@ -1,32 +1,26 @@
 package com.e3civichigh.coding;
+import java.math.BigInteger;
 
 public class Factorial
 {
     public static void main(String[] args)
     {
         final int NUM_FACTS = 100;
-
         // TODO 1: Please create a for loop that counts from 0 up to NUM_FACTS
-        for () {
-            System.out.println(i + "! is " + factorial(i));
-        }
+        for (int i=0; i <= NUM_FACTS; i++)
+            {
+                System.out.println(i + "! is " + factorial(i));
+            }
     }
 
-    /**
-     * factorial computes n!
-     *
-     * @param n
-     * @return n factorial
-     */
-    public static int factorial(int n)
+    public static BigInteger factorial(int n)
     {
-        int result = 1;
+        BigInteger factorial = BigInteger.ONE;
 
-        // TODO 2: Please create a foor loop that counts from 2 up to and including n
-        for() {
-            result *= i;
+        for (int i = n; i > 0; i--) {
+            factorial = factorial.multiply(BigInteger.valueOf(i));
         }
 
-        return result;
+        return factorial;
     }
 }
